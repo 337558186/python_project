@@ -4,21 +4,18 @@ Author: duke0552
 version: V1.0
 Date: 2025-02-27 10:02:45
 '''
+import sys
 
-# 简单的for循环遍历列表
+
 def simple_for_loop():
-    """
-    简单的for循环遍历列表
-    """
+   
     numbers = [1, 2, 3, 4, 5]
     for number in numbers:
         print(number)
 
 # 使用range函数的for循环
 def for_loop_with_range():
-    """
-    使用range函数的for循环
-    """
+    
     for i in range(5):
         print(i)
 
@@ -58,3 +55,17 @@ def list_comprehension_for_loop():
     numbers = [1, 2, 3, 4, 5]
     squares = [number ** 2 for number in numbers]
     print(squares)
+
+
+# 迭代器 iter
+def base4():
+    list = [1, 2, 3, 4]
+    it = iter(list)  # 创建迭代器对象
+    for x in it:
+        print(x, end=" ")
+    # 迭代器 next
+    while True:
+        try:
+            print(next(it))
+        except StopIteration:
+            sys.exit()
